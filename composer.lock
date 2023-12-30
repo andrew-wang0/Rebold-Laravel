@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7903e6b3078d62bc876a9226dac8b6f0",
+    "content-hash": "c824afcc4d26e70c901302f54f39678a",
     "packages": [
         {
             "name": "brick/math",
@@ -2103,6 +2103,45 @@
                 "source": "https://github.com/thephpleague/oauth1-client/tree/v1.10.1"
             },
             "time": "2022-04-15T14:02:14+00:00"
+        },
+        {
+            "name": "longhornopen/canvas-api",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/longhornopen/php-canvas-api.git",
+                "reference": "350bd984c1445d06fd64e64d0e454cb318358b6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/longhornopen/php-canvas-api/zipball/350bd984c1445d06fd64e64d0e454cb318358b6e",
+                "reference": "350bd984c1445d06fd64e64d0e454cb318358b6e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "~7.0",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LonghornOpen\\CanvasApi\\": "src/LonghornOpen/CanvasApi/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "PHP client for the Canvas API",
+            "support": {
+                "issues": "https://github.com/longhornopen/php-canvas-api/issues",
+                "source": "https://github.com/longhornopen/php-canvas-api/tree/v1.0.3"
+            },
+            "time": "2023-09-28T15:01:35+00:00"
         },
         {
             "name": "monolog/monolog",

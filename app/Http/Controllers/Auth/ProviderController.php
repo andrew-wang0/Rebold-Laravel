@@ -24,6 +24,7 @@ class ProviderController extends Controller
         ], [
             'name' => $SocialUser->getName(),
             'email' => $SocialUser->getEmail(),
+            'avatar' => $SocialUser->getAvatar(),
             'provider_token' => $SocialUser->token,
         ]);
 
