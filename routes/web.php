@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Process\Process;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,5 +47,23 @@ Route::get('/assignments', function () {
 Route::get('/canvas', function () {
     return view('canvas');
 })->middleware(['auth', 'verified'])->name('canvas');
+
+Route::get('/test', function () {
+    return view('test');
+});
+
+Route::post('/run-code', function () {
+    $javaCode = request('javaCode');
+
+    $tempFilePath = 'MPC123.tmp';
+    $javaFilePath = $tempFilePath.'.java';
+
+    file_put_contents($javaFilePath, $javaCode);
+
+    exec('javac '.$javaFilePath, $output);
+    exec('java Main', $output);
+
+    return back()->with('result', $output[0]);
+})->name('run-code');
 
 require __DIR__.'/auth.php';
